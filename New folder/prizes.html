@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon Prizes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #4f46e5;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .prize-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .prize-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<div class="nav">
+    </head>
+
+    <body class="gradient-bg min-h-screen text-white">
+        <!-- Header -->
+        <header class="container mx-auto py-6 px-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <a href="http://localhost:3000/">
+                        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                            <i class="fas fa-code text-purple-600 text-2xl"></i>
+                        </div>
+                    </a>
+                    <h1 class="text-3xl font-bold">HackHub 2025</h1>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="http://localhost:3000/" class="hover:text-purple-200 transition">Home</a>
+                    <a href="login/loginPage.html" class="hover:text-purple-200 transition">Registration</a>
+                    <a href="prizes.html" class="hover:text-purple-200 transition">Prizes</a>
+                    <a href="schedule.html" class="hover:text-purple-200 transition">Schedule</a>
+                </nav>
+            </div>
+        </header>
+</div>
+
+<body class="min-h-screen text-white">
+
+    <main class="container mx-auto px-4 py-10">
+        <section id="prizes" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Grand Prize Card -->
+            <div class="prize-card bg-white text-gray-800 p-6 rounded-lg">
+                <div class="text-center mb-4">
+                    <i class="fas fa-trophy text-yellow-500 text-4xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2">Grand Prize</h2>
+                <p class="mb-4">The ultimate winner takes home the crown with premium rewards.</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>$10,000 cash prize</li>
+                    <li>High-end laptop worth $2,500</li>
+                    <li>Exclusive mentorship program</li>
+                    <li>Featured in tech publications</li>
+                </ul>
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/65643ee9-cce4-4973-848c-b7cbdd6662af.png"
+                    alt="Shiny silver laptop open on a sleek desk with glowing screen displaying coding interface, surrounded by tech accessories like headphones and a mouse in a modern office setting with city skyline view through the window"
+                    class="w-full h-32 object-cover rounded" />
+            </div>
+
+            <!-- First Runner-Up -->
+            <div class="prize-card bg-white text-gray-800 p-6 rounded-lg">
+                <div class="text-center mb-4">
+                    <i class="fas fa-medal text-silver text-4xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2">First Runner-Up</h2>
+                <p class="mb-4">Honorable mention with valuable opportunities.</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>$5,000 cash prize</li>
+                    <li>VR headset and accessories</li>
+                    <li>Networking event invitations</li>
+                    <li>Startup incubation support</li>
+                </ul>
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9d7972c9-9000-4764-9c16-f4ff68b8fe1d.png"
+                    alt=" Sleek black VR headset placed on a stand with controllers alongside in a futuristic room with hologram projections and glowing blue accents, symbolizing immersive technology innovation"
+                    class="w-full h-32 object-cover rounded" />
+            </div>
+
+            <!-- Best AI Innovation -->
+            <div class="prize-card bg-white text-gray-800 p-6 rounded-lg">
+                <div class="text-center mb-4">
+                    <i class="fas fa-brain text-blue-500 text-4xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2">Best AI Innovation</h2>
+                <p class="mb-4">For groundbreaking AI projects that push boundaries.</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>$3,000 cash prize</li>
+                    <li>Cloud computing credits worth $1,000</li>
+                    <li>AI conference tickets</li>
+                    <li>Collaboration with top AI labs</li>
+                </ul>
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1e6e13b1-b8e3-4b9e-be15-6374b451fa14.png"
+                    alt="Digital brain illustration with neural network connections glowing in green hues on a dark background, with robotic arms coding and data streams flowing around in a futuristic lab environment"
+                    class="w-full h-32 object-cover rounded" />
+            </div>
+
+            <!-- Best Web App -->
+            <div class="prize-card bg-white text-gray-800 p-6 rounded-lg">
+                <div class="text-center mb-4">
+                    <i class="fas fa-code text-green-500 text-4xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2">Best Web App</h2>
+                <p class="mb-4">Top web applications with impressive user experience.</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>$3,000 cash prize</li>
+                    <li>Web hosting package for a year</li>
+                    <li>UI/UX design software subscription</li>
+                    <li>Profile boosting on developer platforms</li>
+                </ul>
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/7403ba4c-7395-4b11-bc36-cb14ae5ba206.png"
+                    alt="Modern web application interface displayed on a dual-monitor setup, showing responsive design with navigation menus, interactive elements, and vibrant color schemes in a clean, minimalist office space"
+                    class="w-full h-32 object-cover rounded" />
+            </div>
+
+            <!-- People's Choice -->
+            <div class="prize-card bg-white text-gray-800 p-6 rounded-lg">
+                <div class="text-center mb-4">
+                    <i class="fas fa-users text-purple-500 text-4xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2">People's Choice</h2>
+                <p class="mb-4">The project that won the community's heart.</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>$2,500 cash prize</li>
+                    <li>Social media amplification tools</li>
+                    <li>Community engagement workshop</li>
+                    <li>Featured in event highlights</li>
+                </ul>
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/55966815-576d-41e1-aae4-c87e5cc04f31.png"
+                    alt="Crowd of diverse people holding up voting signs and smiling around a central podium with a trophy, illuminated by stage lights in a festive auditorium setting with banners and electronic screens in the background"
+                    class="w-full h-32 object-cover rounded" />
+            </div>
+
+            <!-- Special Mention -->
+            <div class="prize-card bg-white text-gray-800 p-6 rounded-lg">
+                <div class="text-center mb-4">
+                    <i class="fas fa-star text-orange-500 text-4xl"></i>
+                </div>
+                <h2 class="text-2xl font-bold mb-2">Special Mention</h2>
+                <p class="mb-4">For creative and impactful ideas deserving recognition.</p>
+                <ul class="list-disc list-inside mb-4">
+                    <li>$1,000 cash prize</li>
+                    <li>Gift cards for tech supplies</li>
+                    <li>Portfolio review session</li>
+                    <li>Entry into future hackathons</li>
+                </ul>
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/254abe45-d03d-4aef-9266-2edec9c09d52.png"
+                    alt="Creative workshop table cluttered with notebooks, pens, inspirational quotes on walls, connected devices, and a spotlight shining on a unique project prototype model in a bright, collaborative workspace"
+                    class="w-full h-32 object-cover rounded" />
+            </div>
+        </section>
+
+        <section class="text-center mt-12">
+            <p class="text-lg mb-6">Join the hackathon and compete for these amazing prizes! Register now to showcase
+                your skills and win big.</p>
+            <a href="login/loginPage.html"> <button
+                    class="bg-yellow-500 text-gray-900 py-2 px-6 rounded-full font-semibold hover:bg-yellow-400 transition">Register
+                    Now</button></a>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.prize-card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    card.classList.add('fade-in');
+                }, index * 200);
+            });
+        });
+    </script>
+</body>
+
+</html>
+</content>
+</create_file>

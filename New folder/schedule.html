@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackHub - Multi-Hackathon Schedules</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        .gradient-bg {
+            background: #4f46e5;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            ring: none;
+        }
+
+        /* Custom styles for unique multi-timeline design with animations and tabs */
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .hero {
+            background-image: url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4e9f3b2c-7d12-4583-a923-541a8cde6b9e.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            z-index: 2;
+            color: white;
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: none;
+        }
+
+        .tab-buttons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tab-button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+            font-weight: 600;
+        }
+
+        .tab-button.active {
+            background: rgba(255, 255, 255, 0.8);
+            color: #4f46e5;
+        }
+
+        .tab-button:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            padding-left: 4rem;
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .timeline-item:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+
+        .timeline-item:nth-child(odd) {
+            animation-delay: 0.4s;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 4px solid #4f46e5;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .time {
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .event {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .event:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-icon {
+            font-size: 2rem;
+            color: #4f46e5;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-desc {
+            color: #64748b;
+            margin-bottom: 1rem;
+        }
+
+        .event-details {
+            display: none;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .register-btn {
+            background: #4f46e5;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .register-btn:hover {
+            background: #3730a3;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 1.5rem 0;
+        }
+
+        .hackathon-selector {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .selector-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+
+<body class="gradient-bg min-h-screen text-white">
+    <!-- Header -->
+
+    <header class="container mx-auto py-6 px-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="http://localhost:3000/">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                        <i class="fas fa-code text-purple-600 text-2xl"></i>
+                    </div>
+                </a>
+                <h1 class="text-3xl font-bold">HackHub 2025</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="http://localhost:3000/" class="hover:text-purple-200 transition">Home</a>
+                <a href="login/loginPage.html" class="hover:text-purple-200 transition">Registration</a>
+                <a href="prizes.html" class="hover:text-purple-200 transition">Prizes</a>
+                <a href="schedule.html" class="hover:text-purple-200 transition">Schedule</a>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <section class="py-10 bg-transparent">
+        <div class="container mx-auto px-4">
+            <div class="hackathon-selector">
+                <h3 class="selector-title text-center">Select Hackathon</h3>
+                <div class="tab-buttons">
+                    <button class="tab-button active" onclick="showTab('ai-hack')">AI Hack 2023</button>
+                    <button class="tab-button" onclick="showTab('web-dev-hack')">Web Dev Hack 2023</button>
+                    <button class="tab-button" onclick="showTab('fintech-hack')">FinTech Hack 2023</button>
+                    <button class="tab-button" onclick="showTab('blockchain-hack')">Blockchain Innovate 2023</button>
+                </div>
+            </div>
+
+            <!-- AI Hack 2023 -->
+            <div id="ai-hack" class="tab-content active">
+                <h2 class="text-4xl font-bold text-center mb-10 text-white">AI Hack 2023 Schedule</h2>
+                <div class="text-center mb-6">
+                    <button class="register-btn" onclick="register('AI Hack 2023')">Register for AI Hack</button>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time">May 1, 10:00 AM</div>
+                        <div class="event" onclick="toggleDetails('ai-regopen-details')">
+                            <div class="event-icon"><i class="fas fa-door-open"></i></div>
+                            <h3 class="event-title">Registration Opens</h3>
+                            <div class="event-desc">Sign up for the hackathon and form your teams.</div>
+                            <div id="ai-regopen-details" class="event-details">
+                                <p>Visit the registration page and submit your team details. Early bird perks available!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">May 10, 5:00 PM</div>
+                        <div class="event" onclick="toggleDetails('ai-selection-details')">
+                            <div class="event-icon"><i class="fas fa-tasks"></i></div>
+                            <h3 class="event-title">Selection Steps</h3>
+                            <div class="event-desc">Shortlisting of teams based on submitted ideas.</div>
+                            <div id="ai-selection-details" class="event-details">
+                                <p>Our panel will review all submissions and announce selected teams via email.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">May 12, 7:00 PM</div>
+                        <div class="event" onclick="toggleDetails('ai-call-details')">
+                            <div class="event-icon"><i class="fas fa-video"></i></div>
+                            <h3 class="event-title">Call for Meet</h3>
+                            <div class="event-desc">Kick-off meeting for all selected teams.</div>
+                            <div id="ai-call-details" class="event-details">
+                                <p>Join the online meet to discuss rules, expectations, and Q&A with mentors.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">May 13-15</div>
+                        <div class="event" onclick="toggleDetails('ai-hacking-details')">
+                            <div class="event-icon"><i class="fas fa-robot"></i></div>
+                            <h3 class="event-title">Hacking Period</h3>
+                            <div class="event-desc">Build your AI-powered solutions.</div>
+                            <div id="ai-hacking-details" class="event-details">
+                                <p>Access datasets and mentors for cutting-edge AI projects. Submit your final project
+                                    by deadline.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">May 16, 6:00 PM</div>
+                        <div class="event" onclick="toggleDetails('ai-winner-details')">
+                            <div class="event-icon"><i class="fas fa-trophy"></i></div>
+                            <h3 class="event-title">Winner Announcement</h3>
+                            <div class="event-desc">Top teams and projects revealed!</div>
+                            <div id="ai-winner-details" class="event-details">
+                                <p>Winners will be announced live and prizes distributed. All participants receive
+                                    certificates.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Dev Hack 2023 -->
+            <div id="web-dev-hack" class="tab-content">
+                <h2 class="text-4xl font-bold text-center mb-10 text-white">Web Dev Hack 2023 Schedule</h2>
+                <div class="text-center mb-6">
+                    <button class="register-btn" onclick="register('Web Dev Hack 2023')">Register for Web Dev
+                        Hack</button>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time">June 1, 10:00 AM</div>
+                        <div class="event" onclick="toggleDetails('wd-regopen-details')">
+                            <div class="event-icon"><i class="fas fa-door-open"></i></div>
+                            <h3 class="event-title">Registration Opens</h3>
+                            <div class="event-desc">Sign up and form your web dev teams.</div>
+                            <div id="wd-regopen-details" class="event-details">
+                                <p>Submit your team and project ideas for review.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">June 8, 5:00 PM</div>
+                        <div class="event" onclick="toggleDetails('wd-selection-details')">
+                            <div class="event-icon"><i class="fas fa-tasks"></i></div>
+                            <h3 class="event-title">Selection Steps</h3>
+                            <div class="event-desc">Shortlisting based on innovation and feasibility.</div>
+                            <div id="wd-selection-details" class="event-details">
+                                <p>Selected teams will be notified and invited to the kick-off meet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">June 10, 7:00 PM</div>
+                        <div class="event" onclick="toggleDetails('wd-call-details')">
+                            <div class="event-icon"><i class="fas fa-video"></i></div>
+                            <h3 class="event-title">Call for Meet</h3>
+                            <div class="event-desc">Kick-off and Q&A session.</div>
+                            <div id="wd-call-details" class="event-details">
+                                <p>Meet mentors and clarify project requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">June 11-13</div>
+                        <div class="event" onclick="toggleDetails('wd-hacking-details')">
+                            <div class="event-icon"><i class="fas fa-globe"></i></div>
+                            <h3 class="event-title">Hacking Period</h3>
+                            <div class="event-desc">Develop your web applications.</div>
+                            <div id="wd-hacking-details" class="event-details">
+                                <p>Use latest technologies and submit your project by deadline.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">June 14, 6:00 PM</div>
+                        <div class="event" onclick="toggleDetails('wd-winner-details')">
+                            <div class="event-icon"><i class="fas fa-trophy"></i></div>
+                            <h3 class="event-title">Winner Announcement</h3>
+                            <div class="event-desc">Best web projects awarded.</div>
+                            <div id="wd-winner-details" class="event-details">
+                                <p>Winners and runners-up will be announced live.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FinTech Hack 2023 -->
+            <div id="fintech-hack" class="tab-content">
+                <h2 class="text-4xl font-bold text-center mb-10 text-white">FinTech Hack 2023 Schedule</h2>
+                <div class="text-center mb-6">
+                    <button class="register-btn" onclick="register('FinTech Hack 2023')">Register for FinTech
+                        Hack</button>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time">July 1, 10:00 AM</div>
+                        <div class="event" onclick="toggleDetails('ft-regopen-details')">
+                            <div class="event-icon"><i class="fas fa-door-open"></i></div>
+                            <h3 class="event-title">Registration Opens</h3>
+                            <div class="event-desc">Sign up and submit your fintech ideas.</div>
+                            <div id="ft-regopen-details" class="event-details">
+                                <p>Early registration gives access to exclusive fintech webinars.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">July 8, 5:00 PM</div>
+                        <div class="event" onclick="toggleDetails('ft-selection-details')">
+                            <div class="event-icon"><i class="fas fa-tasks"></i></div>
+                            <h3 class="event-title">Selection Steps</h3>
+                            <div class="event-desc">Shortlisting based on impact and innovation.</div>
+                            <div id="ft-selection-details" class="event-details">
+                                <p>Selected teams will be invited to the kick-off call.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">July 10, 7:00 PM</div>
+                        <div class="event" onclick="toggleDetails('ft-call-details')">
+                            <div class="event-icon"><i class="fas fa-video"></i></div>
+                            <h3 class="event-title">Call for Meet</h3>
+                            <div class="event-desc">Kick-off and Q&A session.</div>
+                            <div id="ft-call-details" class="event-details">
+                                <p>Meet fintech experts and clarify project requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">July 11-13</div>
+                        <div class="event" onclick="toggleDetails('ft-hacking-details')">
+                            <div class="event-icon"><i class="fas fa-dollar"></i></div>
+                            <h3 class="event-title">Hacking Period</h3>
+                            <div class="event-desc">Develop your fintech solutions.</div>
+                            <div id="ft-hacking-details" class="event-details">
+                                <p>Integrate APIs and secure data for next-gen fintech apps.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">July 14, 6:00 PM</div>
+                        <div class="event" onclick="toggleDetails('ft-winner-details')">
+                            <div class="event-icon"><i class="fas fa-trophy"></i></div>
+                            <h3 class="event-title">Winner Announcement</h3>
+                            <div class="event-desc">Best fintech projects awarded.</div>
+                            <div id="ft-winner-details" class="event-details">
+                                <p>Winners will be announced and prizes distributed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blockchain Innovate 2023 -->
+            <div id="blockchain-hack" class="tab-content">
+                <h2 class="text-4xl font-bold text-center mb-10 text-white">Blockchain Innovate 2023 Schedule</h2>
+                <div class="text-center mb-6">
+                    <button class="register-btn" onclick="register('Blockchain Innovate 2023')">Register for Blockchain
+                        Hack</button>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="time">August 1, 10:00 AM</div>
+                        <div class="event" onclick="toggleDetails('bc-regopen-details')">
+                            <div class="event-icon"><i class="fas fa-door-open"></i></div>
+                            <h3 class="event-title">Registration Opens</h3>
+                            <div class="event-desc">Sign up and submit your blockchain ideas.</div>
+                            <div id="bc-regopen-details" class="event-details">
+                                <p>Early registration gives access to exclusive blockchain webinars.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">August 8, 5:00 PM</div>
+                        <div class="event" onclick="toggleDetails('bc-selection-details')">
+                            <div class="event-icon"><i class="fas fa-tasks"></i></div>
+                            <h3 class="event-title">Selection Steps</h3>
+                            <div class="event-desc">Shortlisting based on impact and innovation.</div>
+                            <div id="bc-selection-details" class="event-details">
+                                <p>Selected teams will be invited to the kick-off call.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">August 10, 7:00 PM</div>
+                        <div class="event" onclick="toggleDetails('bc-call-details')">
+                            <div class="event-icon"><i class="fas fa-video"></i></div>
+                            <h3 class="event-title">Call for Meet</h3>
+                            <div class="event-desc">Kick-off and Q&A session.</div>
+                            <div id="bc-call-details" class="event-details">
+                                <p>Meet blockchain experts and clarify project requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">August 11-13</div>
+                        <div class="event" onclick="toggleDetails('bc-hacking-details')">
+                            <div class="event-icon"><i class="fas fa-cubes"></i></div>
+                            <h3 class="event-title">Hacking Period</h3>
+                            <div class="event-desc">Develop your blockchain solutions.</div>
+                            <div id="bc-hacking-details" class="event-details">
+                                <p>Deploy dApps and explore NFT or crypto functionalities.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="time">August 14, 6:00 PM</div>
+                        <div class="event" onclick="toggleDetails('bc-winner-details')">
+                            <div class="event-icon"><i class="fas fa-trophy"></i></div>
+                            <h3 class="event-title">Winner Announcement</h3>
+                            <div class="event-desc">Best blockchain projects awarded.</div>
+                            <div id="bc-winner-details" class="event-details">
+                                <p>Winners will be announced and prizes distributed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 HackHub. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-4">
+                <a href="#" class="hover:text-indigo-400"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#" class="hover:text-indigo-400"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#" class="hover:text-indigo-400"><i class="fas fa-envelope"></i> Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript for tab switching, detail toggling, and registration
+        function showTab(tabId) {
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function register(eventName) {
+            alert(`Registration for ${eventName} is now open! Head to our main site to sign up.`);
+        }
+    </script>
+</body>
+
+</html>
+</content>
+</create_file>

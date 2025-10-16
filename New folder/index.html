@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HackHub 2025 - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            ring: none;
+        }
+    </style>
+</head>
+
+<body class="gradient-bg min-h-screen text-white">
+    <!-- Header -->
+    <header class="container mx-auto py-6 px-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center">
+                    <i class="fas fa-code text-purple-600 text-2xl"></i>
+                </div>
+                <h1 class="text-3xl font-bold">HackHub 2025</h1>
+            </div>
+            <nav class="hidden md:flex space-x-6">
+                <a href="http://localhost:3000/" class="hover:text-purple-200 transition">Home</a>
+                <a href="login/loginPage.html" class="hover:text-purple-200 transition">Registration</a>
+                <a href="prizes.html" class="hover:text-purple-200 transition">Prizes</a>
+                <a href="schedule.html" class="hover:text-purple-200 transition">Schedule</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-4 py-12 text-center">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-5xl font-bold mb-6">Welcome to HackHub 2025!</h2>
+            <p class="text-xl mb-8 opacity-90">Join us for an exciting hackathon where you can build, create, and
+                innovate with your team!</p>
+            <a href="login/loginPage.html"
+                class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-3 px-6 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">
+                Register Your Team
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container mx-auto px-4 py-8">
+        <h3 class="text-3xl font-bold text-center text-white-700 mb-6">Why Participate?</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg p-6 shadow-lg">
+                <i class="fas fa-trophy text-4xl text-purple-600 mb-4"></i>
+                <h4 class="text-purple-700 text-xl font-semibold mb-2">Exciting Prizes</h4>
+                <p class="text-purple-700 font-semibold mb-2">Compete for a chance to win amazing prizes and recognition
+                    in the tech community.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-lg">
+                <i class="fas fa-users text-4xl text-purple-600 mb-4"></i>
+                <h4 class="text-purple-700 text-xl font-semibold mb-2">Networking Opportunities</h4>
+                <p class="text-purple-700 font-semibold mb-2">Meet like-minded individuals, industry experts, and
+                    potential collaborators.</p>
+            </div>
+            <div class="bg-white rounded-lg p-6 shadow-lg">
+                <i class="fas fa-code text-4xl text-purple-600 mb-4"></i>
+                <h4 class="text-purple-700 text-xl font-semibold mb-2">Learn and Grow</h4>
+                <p class="text-purple-700 font-semibold mb-2">Enhance your skills through workshops, mentorship, and
+                    hands-on experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Hackathons Section -->
+    <section class="container mx-auto px-4 py-12">
+        <h3 class="text-3xl font-bold text-center text-white mb-8">Upcoming Hackathons</h3>
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Hackathon Card 1 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+                <i class="fas fa-rocket text-4xl text-blue-600 mb-4"></i>
+                <h4 class="text-2xl font-semibold text-purple-700 mb-2">HackHub 2025</h4>
+                <p class="text-gray-700 mb-2">September 15-17, 2025</p>
+                <p class="text-gray-600 mb-4">Join the flagship event with 500+ participants, workshops, and prizes
+                    worth $10,000!</p>
+                <a href="register.html"
+                    class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-5 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">Details
+                    Soon</a>
+            </div>
+            <!-- Hackathon Card 2 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+                <i class="fas fa-lightbulb text-4xl text-yellow-500 mb-4"></i>
+                <h4 class="text-2xl font-semibold text-purple-700 mb-2">InnovateX 2025</h4>
+                <p class="text-gray-700 mb-2">November 10-12, 2025</p>
+                <p class="text-gray-600 mb-4">A new challenge for creative minds. Collaborate, build, and win exciting
+                    rewards!</p>
+                <a href="index.html"
+                    class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-5 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">Details
+                    soon
+                </a>
+            </div>
+            <!-- Hackathon Card 3 -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+                <i class="fas fa-brain text-4xl text-green-500 mb-4"></i>
+                <h4 class="text-2xl font-semibold text-purple-700 mb-2">CodeSprint 2025</h4>
+                <p class="text-gray-700 mb-2">December 5-7, 2025</p>
+                <p class="text-gray-600 mb-4">A 48-hour coding marathon for all levels. Network, learn, and win cool
+                    swag!</p>
+                <a href="#"
+                    class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-5 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">Details
+                    Soon</a>
+            </div>
+            <!-- Hackathon Card 4 (SIH) -->
+            <div class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center">
+                <i class="fas fa-cogs text-4xl text-red-500 mb-4"></i>
+                <h4 class="text-2xl font-semibold text-purple-700 mb-2">Smart India Hackathon (SIH) 2025</h4>
+                <p class="text-gray-700 mb-2">August 20-22, 2025</p>
+                <p class="text-gray-600 mb-4">Solve real-world problems and make an impact at India's largest hackathon.
+                    Open to students nationwide!</p>
+                <a href="https://www.sih.gov.in/" target="_blank"
+                    class="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-5 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all duration-300">Visit
+                    SIH</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container mx-auto px-4 py-8 mt-12 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex justify-center space-x-8 mb-6">
+                <a href="#" class="text-white hover:text-purple-200"><i class="fab fa-twitter text-2xl"></i></a>
+                <a href="#" class="text-white hover:text-purple-200"><i class="fab fa-linkedin text-2xl"></i></a>
+                <a href="#" class="text-white hover:text-purple-200"><i class="fab fa-github text-2xl"></i></a>
+                <a href="#" class="text-white hover:text-purple-200"><i class="fab fa-discord text-2xl"></i></a>
+            </div>
+            <p class="text-purple-100">© 2025 HackHub. All rights reserved. Built with ❤️ for developers</p>
+        </div>
+    </footer>
+</body>
+
+</html>

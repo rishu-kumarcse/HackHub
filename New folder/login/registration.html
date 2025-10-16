@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HackHub - Register</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="registration-simple.css">
+</head>
+
+<body>
+    <a href="http://localhost:3000/">
+        <nav style="padding: 0.25rem;" class="bg-white shadow p-4 flex justify-center">
+            <!-- Navbar / Header -->
+
+            <div class="w-full flex items-center p-4 bg-white shadow-md">
+                <div class="flex items-center space-x-3">
+                    <img src="https://storage.googleapis.com/a1aa/image/5aec10dc-fde5-484e-6b67-6127332865d1.jpg"
+                        alt="HackHub logo" class="w-10 h-10 rounded-full" />
+
+                    <span class="text-2xl font-semibold text-indigo-600 select-none">HackHub</span>
+                </div>
+            </div>
+
+        </nav>
+    </a>
+    <main>
+        <div class="flip-container">
+            <div class="flipper" id="flipContainer">
+
+                <!-- FRONT: Registration Form -->
+                <section class="front" aria-labelledby="registerTitle">
+                    <h1 id="registerTitle" class="text-2xl font-semibold mb-4">Create Your HackHub Account</h1>
+                    <p class="mb-6 text-gray-600">Join the community and start participating in hackathons today.</p>
+
+                    <form id="registerForm" novalidate>
+                        <label for="firstName">First Name *</label>
+                        <input type="text" id="firstName" name="firstName" required />
+
+                        <label for="lastName">Last Name *</label>
+                        <input type="text" id="lastName" name="lastName" required />
+
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required />
+
+                        <label for="country">Country *</label>
+                        <select id="country" name="country" required>
+                            <option value="" disabled selected>Select your country</option>
+                            <option value="US">United States</option>
+                            <option value="UK">United Kingdom</option>
+                            <option value="CA">Canada</option>
+                            <option value="AU">Australia</option>
+                            <option value="IN">India</option>
+                        </select>
+
+                        <label for="password">Password *</label>
+                        <input type="password" id="password" name="password" required minlength="8" />
+
+                        <label for="confirmPassword">Confirm Password *</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" required />
+
+                        <label
+                            style="display:inline-flex; align-items:center; gap:8px; white-space:nowrap; cursor:pointer;">
+                            <input type="checkbox" id="terms" name="terms" required
+                                style="width:16px; height:16px; margin:0; vertical-align:middle;" />
+                            <span style="font-size:14px; line-height:1;">
+                                I agree to the
+                                <a href="terms.html" target="_blank" rel="noopener noreferrer">Terms</a>
+                                and
+                                <a href="privacy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>.
+                            </span>
+                        </label>
+
+
+
+                        <button type="submit" class="btn-submit mt-4">Register</button>
+                    </form>
+                </section>
+
+                <!-- BACK: Success -->
+                <section class="back">
+                    🎉 Registration Successful! Redirecting to Login...
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const firstName = this.firstName.value.trim();
+            const lastName = this.lastName.value.trim();
+            const email = this.email.value.trim();
+            const country = this.country.value;
+            const password = this.password.value;
+            const confirmPassword = this.confirmPassword.value;
+            const terms = this.terms.checked;
+
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+            if (!terms) {
+                alert('You must agree to the terms.');
+                return;
+            }
+
+            try {
+                const res = await fetch('/register', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ firstName, lastName, email, country, password, confirmPassword, terms })
+                });
+
+                const data = await res.text(); // server returns HTML
+                if (res.ok) {
+                    document.getElementById('flipContainer').classList.add('flipped');
+                    document.querySelector('.back').innerHTML = data;
+
+                    // Redirect after 1.5 seconds
+                    setTimeout(() => window.location.href = 'loginpage.html', 1500);
+                } else {
+                    alert(data);
+                }
+            } catch (err) {
+                console.error('Error submitting form:', err);
+                alert('Server error. Please try again later.');
+            }
+        });
+    </script>
+</body>
+
+</html>

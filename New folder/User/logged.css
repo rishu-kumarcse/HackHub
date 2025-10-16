@@ -1,0 +1,504 @@
+<<<<<<< HEAD
+:root {
+    --primary: #6366f1;
+    --secondary: #8b5cf6;
+    --accent: #06b6d4;
+    --dark: #1f2937;
+    --light: #f9fafb;
+=======
+/* Reset & base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+>>>>>>> 3f728bc (implemented invite using email feature)
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+<<<<<<< HEAD
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.dashboard-container {
+    background: #fff;
+    /* fallback for browsers without backdrop-filter support */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.nav-item {
+    transition: all 0.3s ease;
+    border-radius: 12px;
+    margin: 4px 0;
+=======
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: #2d3748;
+    min-height: 100vh;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background: rgba(255, 255, 255, 0.05);
+    /* glass effect */
+    backdrop-filter: blur(12px);
+    border-radius: 1rem;
+    margin: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar */
+.sidebar {
+    width: 280px;
+    background: linear-gradient(to bottom, #4c1d95, #312e81);
+    color: white;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header {
+    margin-bottom: 2rem;
+}
+
+.sidebar-header h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: linear-gradient(to right, #a78bfa, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.sidebar-header p {
+    font-size: 0.9rem;
+    color: #a78bfa;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.profile-card img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.profile-card h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.profile-card p {
+    font-size: 0.875rem;
+    color: #a78bfa;
+}
+
+.nav-section {
+    flex: 1;
+}
+
+.nav-item {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: all 0.2s;
+>>>>>>> 3f728bc (implemented invite using email feature)
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+<<<<<<< HEAD
+    transform: translateX(5px);
+}
+
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+    display: none;
+    animation: fadeIn 0.3s ease;
+}
+
+.content-section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.chat-message {
+    max-width: 70%;
+    margin: 8px 0;
+    animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.mentor-card {
+    transition: all 0.3s ease;
+}
+
+.mentor-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);
+    height: 8px;
+    border-radius: 4px;
+    transition: width 1s ease;
+}
+
+.team-member {
+    transition: all 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+    background: rgba(99, 102, 241, 0.1);
+}
+
+.notification-badge {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(239, 68, 68, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0);
+=======
+    transform: translateX(4px);
+}
+
+.nav-item.active {
+    background: rgba(167, 139, 250, 0.2);
+    border-left: 3px solid #a78bfa;
+}
+
+.upcoming-section {
+    margin-top: 2rem;
+}
+
+.upcoming-section h3 {
+    font-size: 0.9rem;
+    color: #a78bfa;
+    margin-bottom: 1rem;
+}
+
+.upcoming-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s;
+}
+
+.upcoming-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.02);
+}
+
+.logout-btn {
+    margin-top: auto;
+    padding: 0.75rem;
+    background: rgba(239, 68, 68, 0.1);
+    border: none;
+    border-radius: 0.5rem;
+    color: #f87171;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.logout-btn:hover {
+    background: rgba(239, 68, 68, 0.2);
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 2rem;
+    overflow-y: auto;
+    background: transparent;
+    /* ✅ no white background */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin-bottom: 2rem;
+}
+
+header h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #4c1d95, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+header p {
+    color: #6b7280;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.stat-card h3 {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4c1d95;
+}
+
+.card {
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th {
+    text-align: left;
+    padding: 1rem;
+    font-weight: 600;
+    color: #4c1d95;
+}
+
+table td {
+    padding: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Upload Project Form */
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.upload-form input,
+.upload-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+}
+
+.upload-form button {
+    padding: 0.75rem;
+    background: linear-gradient(to right, #4c1d95, #7c3aed);
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.upload-form button:hover {
+    opacity: 0.9;
+}
+
+/* Chatroom */
+.chat-message {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.75rem;
+    animation: slideIn 0.3s ease;
+    background: rgba(255, 255, 255, 0.1);
+    /* glass */
+    color: white;
+}
+
+/* Mentors */
+.mentor-card {
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    transition: all 0.3s;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.08);
+    /* glass */
+    backdrop-filter: blur(10px);
+}
+
+.mentor-card:hover {
+    transform: scale(1.05);
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 8px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    animation: progressAnim 2s ease-in-out infinite;
+}
+
+/* Team Members */
+.team-member {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.team-member:hover {
+    transform: translateX(4px);
+}
+
+/* Notification Badge */
+.notification-badge {
+    background: #ef4444;
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    animation: pulse 2s infinite;
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes progressAnim {
+    0% {
+        opacity: 0.7;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.7;
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+>>>>>>> 3f728bc (implemented invite using email feature)
+    }
+}

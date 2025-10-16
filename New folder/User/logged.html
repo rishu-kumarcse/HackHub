@@ -1,0 +1,1196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hackathon Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+<<<<<<< HEAD
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-4" style="background-color: #130808a3;">
+    <div class="dashboard-container w-full max-w-7xl h-[90vh] flex bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Sidebar -->
+        <aside class="sidebar w-80 p-6 flex flex-col bg-gray-800 text-white h-full overflow-y-auto">
+=======
+    <link rel="stylesheet" href="logged.css">
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-4">
+    <div class="dashboard-container w-full max-w-7xl h-[90vh] flex rounded-lg shadow-lg overflow-hidden">
+        <!-- Sidebar -->
+        <aside class="sidebar w-80 p-6 flex flex-col text-white h-full overflow-y-auto">
+>>>>>>> 3f728bc (implemented invite using email feature)
+            <!-- Logo -->
+            <div class="text-center mb-8">
+                <h1 class="text-2xl font-bold">HackHub</h1>
+                <p class="text-blue-300">Innovation Platform</p>
+            </div>
+
+            <!-- User Profile -->
+            <div class="flex items-center mb-8 p-4 bg-white/10 rounded-xl">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ec7e5fce-f5c8-4d22-abdf-f9db5048f629.png"
+                    alt="User profile picture" class="w-12 h-12 rounded-full mr-3" />
+                <div>
+<<<<<<< HEAD
+                    <h3 id="user-name" class="font-semibold">Alex Johnson</h3>
+                    <p id="user-team" class="text-blue-200 text-sm">Team: Quantum Coders</p>
+=======
+                    <h3 class="font-semibold">Alex Johnson</h3>
+                    <p class="text-blue-200 text-sm">Team: Quantum Coders</p>
+>>>>>>> 3f728bc (implemented invite using email feature)
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="flex-1 space-y-1">
+                <div class="nav-item active p-4 cursor-pointer flex items-center gap-3 rounded hover:bg-gray-700"
+                    data-section="dashboard">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Dashboard</span>
+                </div>
+                <div class="nav-item p-4 cursor-pointer flex items-center gap-3 rounded hover:bg-gray-700"
+                    data-section="chat">
+                    <i class="fas fa-comments"></i>
+                    <span>Chat Room</span>
+                    <span
+                        class="notification-badge bg-red-500 text-white text-xs px-2 py-1 rounded-full ml-auto">3</span>
+                </div>
+                <div class="nav-item p-4 cursor-pointer flex items-center gap-3 rounded hover:bg-gray-700"
+                    data-section="mentors">
+                    <i class="fas fa-users"></i>
+                    <span>Mentors</span>
+                </div>
+                <div class="nav-item p-4 cursor-pointer flex items-center gap-3 rounded hover:bg-gray-700"
+                    data-section="projects">
+                    <i class="fas fa-code"></i>
+                    <span>Projects</span>
+                </div>
+                <div class="nav-item p-4 cursor-pointer flex items-center gap-3 rounded hover:bg-gray-700"
+                    data-section="team">
+                    <i class="fas fa-user-friends"></i>
+                    <span>Team</span>
+                </div>
+                <div class="nav-item p-4 cursor-pointer flex items-center gap-3 rounded hover:bg-gray-700"
+                    data-section="schedule">
+                    <i class="fas fa-calendar"></i>
+                    <span>Schedule</span>
+                </div>
+                <div class="nav-item p-4 cursor-pointer flex items-center gap-3 rounded hover:bg-gray-700"
+                    data-section="resources">
+                    <i class="fas fa-book"></i>
+                    <span>Resources</span>
+                </div>
+                <div class="nav-item p-4 cursor-pointer flex items-center gap-3 rounded hover:bg-gray-700"
+                    data-section="upcoming-hackathons">
+                    <i class="fas fa-bolt"></i>
+                    <span>Upcoming Hackathons</span>
+                </div>
+<<<<<<< HEAD
+                <div class="nav-item p-4 cursor-pointer flex items-center gap-3 rounded hover:bg-gray-700"
+                    data-section="leaderboard">
+                    <i class="fas fa-trophy"></i>
+                    <span>Leaderboard</span>
+                </div>
+            </nav>
+
+            <!-- Join Upcoming Hackathons Section (same style as mentors) -->
+            <div class="my-6">
+=======
+            </nav>
+
+            <!-- Join Upcoming Hackathons Section (same style as mentors) -->
+            <!-- <div class="my-6">
+>>>>>>> 3f728bc (implemented invite using email feature)
+                <h3 class="text-lg font-semibold mb-3 text-indigo-300">Join Upcoming Hackathons</h3>
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="bg-white/10 rounded-lg p-4 flex items-center">
+                        <div
+                            class="flex-shrink-0 w-14 h-14 bg-indigo-700/20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-robot text-indigo-300 text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="font-bold text-indigo-200">AI Innovators Hackathon</div>
+                            <div class="text-xs text-blue-100 mb-1">Oct 10-12, 2025</div>
+<<<<<<< HEAD
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScjtepualJt37mHkb3IfWR3a-7pU6g6pmP4h5CL87yyMdBkbw/viewform"
+                                target="_blank" class="text-indigo-400 underline text-sm hover:text-indigo-200">Join
+                                Now</a>
+=======
+                            <a href=https://forms.gle/DkS2y3Auj5gPYwBi8" target="_blank"
+                                class="text-indigo-400 underline text-sm hover:text-indigo-200">Join Now</a>
+>>>>>>> 3f728bc (implemented invite using email feature)
+                        </div>
+                    </div>
+                    <div class="bg-white/10 rounded-lg p-4 flex items-center">
+                        <div
+                            class="flex-shrink-0 w-14 h-14 bg-indigo-700/20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-globe text-indigo-300 text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="font-bold text-indigo-200">Web Wizards Challenge</div>
+                            <div class="text-xs text-blue-100 mb-1">Nov 5-7, 2025</div>
+<<<<<<< HEAD
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScjtepualJt37mHkb3IfWR3a-7pU6g6pmP4h5CL87yyMdBkbw/viewform"
+                                target="_blank" class="text-indigo-400 underline text-sm hover:text-indigo-200">Join
+                                Now</a>
+=======
+                            <a href="https://forms.gle/DkS2y3Auj5gPYwBi8" target="_blank"
+                                class="text-indigo-400 underline text-sm hover:text-indigo-200">Join Now</a>
+>>>>>>> 3f728bc (implemented invite using email feature)
+                        </div>
+                    </div>
+                    <div class="bg-white/10 rounded-lg p-4 flex items-center">
+                        <div
+                            class="flex-shrink-0 w-14 h-14 bg-indigo-700/20 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-coins text-indigo-300 text-2xl"></i>
+                        </div>
+                        <div class="flex-1">
+                            <div class="font-bold text-indigo-200">FinTech Future Sprint</div>
+                            <div class="text-xs text-blue-100 mb-1">Dec 1-3, 2025</div>
+<<<<<<< HEAD
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScjtepualJt37mHkb3IfWR3a-7pU6g6pmP4h5CL87yyMdBkbw/viewform"
+                                target="_blank" class="text-indigo-400 underline text-sm hover:text-indigo-200">Join
+                                Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+=======
+                            <a href="https://forms.gle/DkS2y3Auj5gPYwBi8" target="_blank"
+                                class="text-indigo-400 underline text-sm hover:text-indigo-200">Join Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+>>>>>>> 3f728bc (implemented invite using email feature)
+
+            <!-- Logout -->
+            <div class="mt-auto">
+                <div class="nav-item p-4 cursor-pointer text-red-500 hover:text-red-700 flex items-center gap-3"
+                    id="logout-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+<<<<<<< HEAD
+        <main class="flex-1 p-8 overflow-y-auto bg-gray-50 flex flex-col">
+=======
+        <main class="flex-1 p-8 overflow-y-auto flex flex-col">
+>>>>>>> 3f728bc (implemented invite using email feature)
+            <!-- Header -->
+            <header class="flex justify-between items-center mb-8">
+                <h2 id="section-title" class="text-3xl font-bold text-gray-800">Dashboard</h2>
+            </header>
+
+            <!-- Content Sections -->
+            <section id="dashboard" class="content-section">
+<<<<<<< HEAD
+                <!-- Enhanced Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div
+                        class="bg-gradient-to-br from-blue-100 to-blue-300 p-6 rounded-lg shadow flex flex-col items-center">
+                        <div class="p-3 bg-blue-200 rounded-full mb-2">
+                            <i class="fas fa-code text-blue-700 text-2xl"></i>
+                        </div>
+                        <p class="text-gray-700">Lines of Code</p>
+                        <h3 class="text-2xl font-bold text-blue-900">1,247</h3>
+                        <span class="text-xs text-blue-600 mt-2">+120 this week</span>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-green-100 to-green-300 p-6 rounded-lg shadow flex flex-col items-center">
+                        <div class="p-3 bg-green-200 rounded-full mb-2">
+                            <i class="fas fa-check-circle text-green-700 text-2xl"></i>
+                        </div>
+                        <p class="text-gray-700">Tasks Completed</p>
+                        <h3 class="text-2xl font-bold text-green-900">12/20</h3>
+                        <span class="text-xs text-green-600 mt-2">60% done</span>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-purple-100 to-purple-300 p-6 rounded-lg shadow flex flex-col items-center">
+                        <div class="p-3 bg-purple-200 rounded-full mb-2">
+                            <i class="fas fa-users text-purple-700 text-2xl"></i>
+                        </div>
+                        <p class="text-gray-700">Team Members</p>
+                        <h3 class="text-2xl font-bold text-purple-900">4/5</h3>
+                        <span class="text-xs text-purple-600 mt-2">1 spot left</span>
+                    </div>
+                    <div
+                        class="bg-gradient-to-br from-orange-100 to-orange-300 p-6 rounded-lg shadow flex flex-col items-center">
+                        <div class="p-3 bg-orange-200 rounded-full mb-2">
+                            <i class="fas fa-clock text-orange-700 text-2xl"></i>
+                        </div>
+                        <p class="text-gray-700">Time Remaining</p>
+                        <h3 id="time-remaining" class="text-2xl font-bold text-orange-900">--:--:--</h3>
+                        <span class="text-xs text-orange-600 mt-2">Deadline: May 16, 2025 18:00</span>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-semibold mb-2 text-gray-800">Project Progress</h4>
+                    <div class="w-full bg-gray-200 rounded-full h-4">
+                        <div class="bg-indigo-600 h-4 rounded-full" style="width: 60%;"></div>
+                    </div>
+                    <div class="flex justify-between text-xs text-gray-500 mt-1">
+                        <span>Start</span>
+                        <span>60% Complete</span>
+                        <span>Finish</span>
+                    </div>
+                </div>
+
+                <!-- Recent Activity -->
+                <div class="mb-8">
+                    <h4 class="text-lg font-semibold mb-2 text-gray-800">Recent Activity</h4>
+                    <ul class="divide-y divide-gray-200 bg-white rounded-lg shadow">
+                        <li class="py-3 px-4 flex items-center">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            <span class="text-gray-700">Submitted project proposal</span>
+                            <span class="ml-auto text-xs text-gray-400">2 hours ago</span>
+                        </li>
+                        <li class="py-3 px-4 flex items-center">
+                            <i class="fas fa-comment-dots text-blue-500 mr-2"></i>
+                            <span class="text-gray-700">Joined team chat</span>
+                            <span class="ml-auto text-xs text-gray-400">Yesterday</span>
+                        </li>
+                        <li class="py-3 px-4 flex items-center">
+                            <i class="fas fa-user-plus text-purple-500 mr-2"></i>
+                            <span class="text-gray-700">Added new member: Li Wei</span>
+                            <span class="ml-auto text-xs text-gray-400">2 days ago</span>
+                        </li>
+                        <li class="py-3 px-4 flex items-center">
+                            <i class="fas fa-tasks text-indigo-500 mr-2"></i>
+                            <span class="text-gray-700">Completed "Data Integration" task</span>
+                            <span class="ml-auto text-xs text-gray-400">3 days ago</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <a href="#projects"
+                        class="bg-indigo-100 hover:bg-indigo-200 text-indigo-800 font-semibold p-4 rounded-lg shadow flex items-center gap-3 transition">
+                        <i class="fas fa-code text-xl"></i>
+                        <span>View Projects</span>
+                    </a>
+                    <a href="#mentors"
+                        class="bg-green-100 hover:bg-green-200 text-green-800 font-semibold p-4 rounded-lg shadow flex items-center gap-3 transition">
+                        <i class="fas fa-users text-xl"></i>
+                        <span>Meet Mentors</span>
+                    </a>
+                    <a href="#schedule"
+                        class="bg-orange-100 hover:bg-orange-200 text-orange-800 font-semibold p-4 rounded-lg shadow flex items-center gap-3 transition">
+                        <i class="fas fa-calendar text-xl"></i>
+                        <span>View Schedule</span>
+                    </a>
+                    <a href="#leaderboard"
+                        class="bg-purple-100 hover:bg-purple-200 text-purple-800 font-semibold p-4 rounded-lg shadow flex items-center gap-3 transition">
+                        <i class="fas fa-trophy text-xl"></i>
+                        <span>Leaderboard</span>
+                    </a>
+=======
+                <!-- Stats Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-blue-100 rounded-lg mr-4">
+                                <i class="fas fa-code text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">Lines of Code</p>
+                                <h3 class="text-2xl font-bold">1,247</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-green-100 rounded-lg mr-4">
+                                <i class="fas fa-check-circle text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">Tasks Completed</p>
+                                <h3 class="text-2xl font-bold">12/20</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-purple-100 rounded-lg mr-4">
+                                <i class="fas fa-users text-purple-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">Team Members</p>
+                                <h3 class="text-2xl font-bold">4/5</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <div class="flex items-center">
+                            <div class="p-3 bg-orange-100 rounded-lg mr-4">
+                                <i class="fas fa-clock text-orange-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-gray-600">Time Remaining</p>
+                                <h3 class="text-2xl font-bold">18:24:32</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project List Table -->
+                <div class="bg-white rounded-lg shadow p-6 mt-8">
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Uploaded Projects</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full text-sm text-left">
+                            <thead>
+                                <tr>
+                                    <th class="px-4 py-2 border-b">Project Name</th>
+                                    <th class="px-4 py-2 border-b">GitHub</th>
+                                    <th class="px-4 py-2 border-b">Demo Video</th>
+                                    <th class="px-4 py-2 border-b">PPT File</th>
+                                </tr>
+                            </thead>
+                            <tbody id="project-list">
+                                <!-- Projects will be loaded here -->
+                            </tbody>
+                        </table>
+                    </div>
+>>>>>>> 3f728bc (implemented invite using email feature)
+                </div>
+            </section>
+
+            <section id="mentors" class="content-section hidden">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Mentors</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<<<<<<< HEAD
+                    <div class="bg-white p-6 rounded-lg shadow flex items-center">
+=======
+                    <div class="card flex items-center">
+>>>>>>> 3f728bc (implemented invite using email feature)
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mentor"
+                            class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h3 class="font-semibold text-lg">Dr. Emily Carter</h3>
+                            <p class="text-gray-600">AI & Machine Learning</p>
+                            <p class="text-gray-500 text-sm">emily.carter@hackhub.com</p>
+                        </div>
+                    </div>
+<<<<<<< HEAD
+                    <div class="bg-white p-6 rounded-lg shadow flex items-center">
+=======
+                    <div class="card flex items-center">
+>>>>>>> 3f728bc (implemented invite using email feature)
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Mentor"
+                            class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h3 class="font-semibold text-lg">Mr. John Lee</h3>
+                            <p class="text-gray-600">Web Development</p>
+                            <p class="text-gray-500 text-sm">john.lee@hackhub.com</p>
+                        </div>
+                    </div>
+<<<<<<< HEAD
+                    <div class="bg-white p-6 rounded-lg shadow flex items-center">
+=======
+                    <div class="card flex items-center">
+>>>>>>> 3f728bc (implemented invite using email feature)
+                        <img src="https://randomuser.me/api/portraits/men/65.jpg" alt="Mentor"
+                            class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h3 class="font-semibold text-lg">Ms. Priya Singh</h3>
+                            <p class="text-gray-600">FinTech & Blockchain</p>
+                            <p class="text-gray-500 text-sm">priya.singh@hackhub.com</p>
+                        </div>
+                    </div>
+                    <!-- Double content starts here -->
+<<<<<<< HEAD
+                    <div class="bg-white p-6 rounded-lg shadow flex items-center">
+=======
+                    <div class="card flex items-center">
+>>>>>>> 3f728bc (implemented invite using email feature)
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Mentor"
+                            class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h3 class="font-semibold text-lg">Prof. Linda Zhao</h3>
+                            <p class="text-gray-600">Cloud Computing</p>
+                            <p class="text-gray-500 text-sm">linda.zhao@hackhub.com</p>
+                        </div>
+                    </div>
+<<<<<<< HEAD
+                    <div class="bg-white p-6 rounded-lg shadow flex items-center">
+=======
+                    <div class="card flex items-center">
+>>>>>>> 3f728bc (implemented invite using email feature)
+                        <img src="https://randomuser.me/api/portraits/men/77.jpg" alt="Mentor"
+                            class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h3 class="font-semibold text-lg">Dr. Rajesh Kumar</h3>
+                            <p class="text-gray-600">Cybersecurity</p>
+                            <p class="text-gray-500 text-sm">rajesh.kumar@hackhub.com</p>
+                        </div>
+                    </div>
+<<<<<<< HEAD
+                    <div class="bg-white p-6 rounded-lg shadow flex items-center">
+=======
+                    <div class="card flex items-center">
+>>>>>>> 3f728bc (implemented invite using email feature)
+                        <img src="https://randomuser.me/api/portraits/women/51.jpg" alt="Mentor"
+                            class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h3 class="font-semibold text-lg">Ms. Sofia Martinez</h3>
+                            <p class="text-gray-600">UI/UX Design</p>
+                            <p class="text-gray-500 text-sm">sofia.martinez@hackhub.com</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="content-section hidden">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-semibold text-lg mb-2">Smart Traffic AI</h3>
+                        <p class="text-gray-600 mb-2">Team: Quantum Coders</p>
+                        <p class="text-gray-500 text-sm">An AI-powered solution to optimize city traffic flow.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="font-semibold text-lg mb-2">FinTrack</h3>
+                        <p class="text-gray-600 mb-2">Team: FinTech Wizards</p>
+                        <p class="text-gray-500 text-sm">A blockchain-based expense tracker for secure transactions.</p>
+                    </div>
+                </div>
+                <!-- Upload Project Form -->
+                <div class="bg-white p-6 rounded-lg shadow mb-8 max-w-xl">
+                    <h3 class="font-semibold text-lg mb-4 text-gray-800">Upload Your Project</h3>
+<<<<<<< HEAD
+                    <form id="project-upload-form" class="space-y-4">
+=======
+                    <form id="project-upload-form" class="space-y-4" enctype="multipart/form-data">
+>>>>>>> 3f728bc (implemented invite using email feature)
+                        <div>
+                            <label class="block text-gray-700 mb-1" for="project-name">Project Name</label>
+                            <input type="text" id="project-name" name="name" required
+                                class="w-full p-2 border rounded" />
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-1" for="project-desc">Description</label>
+                            <textarea id="project-desc" name="description" required
+                                class="w-full p-2 border rounded"></textarea>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-1" for="project-github">GitHub Link</label>
+                            <input type="url" id="project-github" name="github" required
+                                class="w-full p-2 border rounded" />
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-1" for="project-video">Demo Video Link</label>
+                            <input type="url" id="project-video" name="video" class="w-full p-2 border rounded" />
+                        </div>
+<<<<<<< HEAD
+=======
+                        <div>
+                            <label class="block text-gray-700 mb-1" for="project-ppt">Upload PPT (optional)</label>
+                            <input type="file" id="project-ppt" name="ppt"
+                                accept=".ppt,.pptx,application/vnd.ms-powerpoint,application/vnd.openxmlformats-officedocument.presentationml.presentation"
+                                class="w-full p-2 border rounded bg-white" />
+                            <span class="text-xs text-gray-500">Accepted: .ppt, .pptx</span>
+                        </div>
+>>>>>>> 3f728bc (implemented invite using email feature)
+                        <button type="submit"
+                            class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700">Upload
+                            Project</button>
+                    </form>
+                    <div id="project-upload-success" class="text-green-600 mt-4 hidden">Project uploaded successfully!
+                    </div>
+                </div>
+            </section>
+
+<<<<<<< HEAD
+            <section id="team" class="content-section hidden">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Team</h2>
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="font-semibold text-lg mb-2">Quantum Coders</h3>
+                    <ul class="list-disc pl-5 text-gray-600">
+                        <li>Alex Johnson (Team Lead)</li>
+                        <li>Maria Gomez (Developer)</li>
+                        <li>Li Wei (Designer)</li>
+                        <li>Samir Patel (AI Specialist)</li>
+                    </ul>
+=======
+            <!-- Team Section (Replace previous team section in your dashboard) -->
+            <section id="team" class="content-section hidden">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Team</h2>
+
+                <div class="card max-w-3xl">
+                    <!-- Invite Modal Trigger -->
+                    <button id="open-invite-modal"
+                        class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 mb-4">
+                        Invite Member
+                    </button>
+
+                    <!-- Pending Invites -->
+                    <h3 class="font-semibold mb-2">Pending Invites</h3>
+                    <ul id="pending-invites" class="space-y-2 mb-4">
+                        <!-- Pending invites appear here -->
+                    </ul>
+
+                    <!-- Confirmed Team Members -->
+                    <h3 class="font-semibold mb-2">Team Members</h3>
+                    <ul id="team-list" class="space-y-2">
+                        <!-- Confirmed members appear here -->
+                    </ul>
+
+                    <div id="team-message" class="text-green-600 text-sm mt-2"></div>
+                </div>
+
+                <!-- Invite Modal -->
+                <div id="invite-modal" class="fixed inset-0 items-center justify-center bg-black/50 hidden z-50">
+                    <div class="bg-white p-6 rounded-lg w-96 relative">
+                        <h3 class="text-lg font-bold mb-4">Invite Member</h3>
+                        <input type="text" id="invite-name" placeholder="Full Name"
+                            class="w-full border rounded px-2 py-1 mb-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <input type="email" id="invite-email" placeholder="Email"
+                            class="w-full border rounded px-2 py-1 mb-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <select id="invite-role"
+                            class="w-full border rounded px-2 py-1 mb-4 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                            <option value="Member">Member</option>
+                            <option value="Admin">Admin</option>
+                        </select>
+                        <div class="flex justify-end gap-2">
+                            <button id="close-invite-modal"
+                                class="px-4 py-2 border rounded hover:bg-gray-200">Cancel</button>
+                            <button id="send-invite"
+                                class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700">Send
+                                Invite</button>
+                        </div>
+                    </div>
+>>>>>>> 3f728bc (implemented invite using email feature)
+                </div>
+            </section>
+
+            <section id="schedule" class="content-section hidden">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Schedule</h2>
+                <ul class="divide-y divide-gray-200">
+                    <li class="py-2 flex justify-between">
+                        <span>Registration Opens</span>
+                        <span class="text-gray-500">May 1, 10:00 AM</span>
+                    </li>
+                    <li class="py-2 flex justify-between">
+                        <span>Selection Steps</span>
+                        <span class="text-gray-500">May 10, 5:00 PM</span>
+                    </li>
+                    <li class="py-2 flex justify-between">
+                        <span>Call for Meet</span>
+                        <span class="text-gray-500">May 12, 7:00 PM</span>
+                    </li>
+                    <li class="py-2 flex justify-between">
+                        <span>Hacking Period</span>
+                        <span class="text-gray-500">May 13-15</span>
+                    </li>
+                    <li class="py-2 flex justify-between">
+                        <span>Winner Announcement</span>
+                        <span class="text-gray-500">May 16, 6:00 PM</span>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="resources" class="content-section hidden">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Resources</h2>
+                <ul class="list-disc pl-5 text-gray-600">
+                    <li>
+                        <a href="https://docs.hackhub.com/guide" target="_blank"
+<<<<<<< HEAD
+                            class="text-blue-600 underline">Participant Guide</a>
+=======
+                            class="text-blue-600 underline">Participant
+                            Guide</a>
+>>>>>>> 3f728bc (implemented invite using email feature)
+                    </li>
+                    <li>
+                        <a href="https://www.kaggle.com/datasets" target="_blank" class="text-blue-600 underline">AI
+                            Datasets</a>
+                    </li>
+                    <li>
+                        <a href="https://tailwindcss.com/" target="_blank" class="text-blue-600 underline">Tailwind CSS
+                            Docs</a>
+                    </li>
+                    <li>
+                        <a href="https://react.dev/" target="_blank" class="text-blue-600 underline">React
+                            Documentation</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section id="join-hackathon" class="content-section hidden">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Join Upcoming Hackathons</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col items-start">
+                        <h3 class="font-semibold text-lg mb-2 text-indigo-700">AI Innovators Hackathon</h3>
+                        <p class="text-gray-600 mb-2">Date: October 10-12, 2025</p>
+                        <p class="text-gray-500 text-sm mb-4">Build innovative AI solutions with top mentors and win
+                            exciting prizes!
+                        </p>
+                        <a href="https://hackhub.com/ai-innovators" target="_blank"
+                            class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Join
+                            Now</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col items-start">
+                        <h3 class="font-semibold text-lg mb-2 text-indigo-700">Web Wizards Challenge</h3>
+                        <p class="text-gray-600 mb-2">Date: November 5-7, 2025</p>
+                        <p class="text-gray-500 text-sm mb-4">Showcase your web development skills and collaborate with
+                            global teams.
+                        </p>
+                        <a href="https://hackhub.com/web-wizards" target="_blank"
+                            class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Join
+                            Now</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col items-start">
+                        <h3 class="font-semibold text-lg mb-2 text-indigo-700">FinTech Future Sprint</h3>
+                        <p class="text-gray-600 mb-2">Date: December 1-3, 2025</p>
+                        <p class="text-gray-500 text-sm mb-4">Create next-gen fintech apps and compete for cash rewards.
+                        </p>
+                        <a href="https://hackhub.com/fintech-future" target="_blank"
+                            class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Join
+                            Now</a>
+                    </div>
+                    <!-- Double content for more hackathons -->
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col items-start">
+                        <h3 class="font-semibold text-lg mb-2 text-indigo-700">Blockchain Builders</h3>
+                        <p class="text-gray-600 mb-2">Date: January 15-17, 2026</p>
+                        <p class="text-gray-500 text-sm mb-4">Dive into blockchain technology and build decentralized
+                            apps.</p>
+                        <a href="https://hackhub.com/blockchain-builders" target="_blank"
+                            class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Join
+                            Now</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col items-start">
+                        <h3 class="font-semibold text-lg mb-2 text-indigo-700">HealthTech Hack</h3>
+                        <p class="text-gray-600 mb-2">Date: February 20-22, 2026</p>
+                        <p class="text-gray-500 text-sm mb-4">Innovate in healthcare with technology and impact lives.
+                        </p>
+                        <a href="https://hackhub.com/healthtech-hack" target="_blank"
+                            class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Join
+                            Now</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col items-start">
+                        <h3 class="font-semibold text-lg mb-2 text-indigo-700">GreenTech Challenge</h3>
+                        <p class="text-gray-600 mb-2">Date: March 10-12, 2026</p>
+                        <p class="text-gray-500 text-sm mb-4">Build sustainable solutions for a greener planet.</p>
+                        <a href="https://hackhub.com/greentech-challenge" target="_blank"
+                            class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Join
+                            Now</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upcoming Hackathons Section (add after other content sections in <main>) -->
+            <section id="upcoming-hackathons" class="content-section hidden">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Upcoming Hackathons</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col items-start">
+                        <h3 class="font-semibold text-lg mb-2 text-indigo-700">AI Innovators Hackathon</h3>
+                        <p class="text-gray-600 mb-2">Date: October 10-12, 2025</p>
+                        <p class="text-gray-500 text-sm mb-4">Build innovative AI solutions with top mentors and win
+                            exciting prizes!</p>
+<<<<<<< HEAD
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScjtepualJt37mHkb3IfWR3a-7pU6g6pmP4h5CL87yyMdBkbw/viewform"
+                            target="_blank"
+=======
+                        <a href="https://forms.gle/DkS2y3Auj5gPYwBi8" target="_blank"
+>>>>>>> 3f728bc (implemented invite using email feature)
+                            class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Register
+                            Team</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col items-start">
+                        <h3 class="font-semibold text-lg mb-2 text-indigo-700">Web Wizards Challenge</h3>
+                        <p class="text-gray-600 mb-2">Date: November 5-7, 2025</p>
+                        <p class="text-gray-500 text-sm mb-4">Showcase your web development skills and collaborate with
+                            global teams.</p>
+<<<<<<< HEAD
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScjtepualJt37mHkb3IfWR3a-7pU6g6pmP4h5CL87yyMdBkbw/viewform"
+                            target="_blank"
+=======
+                        <a href="https://hackhub.com/web-wizards" target="_blank"
+>>>>>>> 3f728bc (implemented invite using email feature)
+                            class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Register
+                            Team</a>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col items-start">
+                        <h3 class="font-semibold text-lg mb-2 text-indigo-700">FinTech Future Sprint</h3>
+                        <p class="text-gray-600 mb-2">Date: December 1-3, 2025</p>
+                        <p class="text-gray-500 text-sm mb-4">Create next-gen fintech apps and compete for cash rewards.
+                        </p>
+<<<<<<< HEAD
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLScjtepualJt37mHkb3IfWR3a-7pU6g6pmP4h5CL87yyMdBkbw/viewform"
+                            target="_blank"
+=======
+                        <a href="https://forms.gle/DkS2y3Auj5gPYwBi8" target="_blank"
+>>>>>>> 3f728bc (implemented invite using email feature)
+                            class="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">Register
+                            Team</a>
+                    </div>
+                </div>
+            </section>
+<<<<<<< HEAD
+
+            <section id="leaderboard" class="content-section hidden">
+                <h2 class="text-2xl font-bold mb-6 text-gray-800">Leaderboard</h2>
+                <div class="bg-white p-6 rounded-lg shadow mb-8">
+                    <table class="min-w-full divide-y divide-gray-200">
+                        <thead>
+                            <tr>
+                                <th class="px-4 py-2 text-left text-xs font-semibold text-gray-700 uppercase">Rank</th>
+                                <th class="px-4 py-2 text-left text-xs font-semibold text-gray-700 uppercase">Team
+                                </th>
+                                <th class="px-4 py-2 text-left text-xs font-semibold text-gray-700 uppercase">Project
+                                </th>
+                                <th class="px-4 py-2 text-left text-xs font-semibold text-gray-700 uppercase">Points
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-gray-50">
+                                <td class="px-4 py-2 font-bold text-indigo-700">1</td>
+                                <td class="px-4 py-2">Quantum Coders</td>
+                                <td class="px-4 py-2">Smart Traffic AI</td>
+                                <td class="px-4 py-2">98</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 font-bold text-indigo-700">2</td>
+                                <td class="px-4 py-2">FinTech Wizards</td>
+                                <td class="px-4 py-2">FinTrack</td>
+                                <td class="px-4 py-2">92</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-4 py-2 font-bold text-indigo-700">3</td>
+                                <td class="px-4 py-2">Web Masters</td>
+                                <td class="px-4 py-2">SiteGuard</td>
+                                <td class="px-4 py-2">89</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 font-bold text-indigo-700">4</td>
+                                <td class="px-4 py-2">AI Pioneers</td>
+                                <td class="px-4 py-2">VisionBot</td>
+                                <td class="px-4 py-2">85</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="px-4 py-2 font-bold text-indigo-700">5</td>
+                                <td class="px-4 py-2">Code Crusaders</td>
+                                <td class="px-4 py-2">EcoTrack</td>
+                                <td class="px-4 py-2">80</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+=======
+>>>>>>> 3f728bc (implemented invite using email feature)
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+<<<<<<< HEAD
+            // Fetch user info from backend
+            fetch('/api/user')
+                .then(res => res.json())
+                .then(user => {
+                    document.getElementById('user-name').textContent = user.name || 'User';
+                    document.getElementById('user-team').textContent = user.team ? `Team: ${user.team}` : '';
+                })
+                .catch(() => {
+                    document.getElementById('user-name').textContent = 'User';
+                    document.getElementById('user-team').textContent = '';
+                });
+
+=======
+>>>>>>> 3f728bc (implemented invite using email feature)
+            const navItems = document.querySelectorAll('.nav-item');
+            const contentSections = document.querySelectorAll('.content-section');
+            const sectionTitle = document.getElementById('section-title');
+
+            // Show only dashboard initially
+            contentSections.forEach(section => {
+                if (section.id === 'dashboard') {
+                    section.classList.remove('hidden');
+                } else {
+                    section.classList.add('hidden');
+                }
+            });
+
+            navItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    const section = this.getAttribute('data-section');
+
+                    // Open chatroom in a new tab
+                    if (section === 'chat') {
+                        window.open('http://localhost:5173/login', '_blank');
+                        return;
+                    }
+
+                    // Update active nav item
+                    navItems.forEach(nav => nav.classList.remove('active', 'bg-gray-700'));
+                    this.classList.add('active', 'bg-gray-700');
+
+                    // Show selected section only
+                    contentSections.forEach(content => {
+                        if (content.id === section) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+
+                    // Update header title text
+                    sectionTitle.textContent = this.textContent.trim();
+                });
+            });
+
+            // Logout button
+            const logoutBtn = document.getElementById('logout-btn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', () => {
+                    window.location.href = '/login/loginpage.html';
+                });
+            }
+
+            // Project upload form handler
+            const projectForm = document.getElementById('project-upload-form');
+            if (projectForm) {
+                projectForm.addEventListener('submit', async function (e) {
+                    e.preventDefault();
+<<<<<<< HEAD
+                    const data = {
+                        name: projectForm.name.value,
+                        description: projectForm.description.value,
+                        github: projectForm.github.value,
+                        video: projectForm.video.value
+                    };
+                    try {
+                        const res = await fetch('/api/projects', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify(data)
+                        });
+                        if (res.ok) {
+                            document.getElementById('project-upload-success').classList.remove('hidden');
+                            projectForm.reset();
+                        } else {
+                            alert('Error uploading project');
+                        }
+                    } catch (err) {
+                        alert('Server error');
+                    }
+                });
+            }
+
+            function startCountdown(deadline) {
+                function updateTimer() {
+                    const now = new Date();
+                    const end = new Date(deadline);
+                    const diff = end - now;
+                    const timerElem = document.getElementById('time-remaining');
+                    if (!timerElem) return;
+                    if (diff <= 0) {
+                        timerElem.textContent = "00:00:00";
+                        return;
+                    }
+                    const hours = String(Math.floor(diff / 1000 / 60 / 60)).padStart(2, '0');
+                    const minutes = String(Math.floor(diff / 1000 / 60) % 60).padStart(2, '0');
+                    const seconds = String(Math.floor(diff / 1000) % 60).padStart(2, '0');
+                    timerElem.textContent = `${hours}:${minutes}:${seconds}`;
+                    setTimeout(updateTimer, 1000);
+                }
+                updateTimer();
+            }
+            document.addEventListener('DOMContentLoaded', () => {
+                startCountdown('2025-05-16T18:00:00');
+            });
+        });
+    </script>
+    <!-- Place this script just before </body> -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function startCountdown(deadline) {
+                function updateTimer() {
+                    const now = new Date();
+                    const end = new Date(deadline);
+                    const diff = end - now;
+                    const timerElem = document.getElementById('time-remaining');
+                    if (!timerElem) return;
+                    if (diff <= 0) {
+                        timerElem.textContent = "00:00:00";
+                        return;
+                    }
+                    const hours = String(Math.floor(diff / 1000 / 60 / 60)).padStart(2, '0');
+                    const minutes = String(Math.floor(diff / 1000 / 60) % 60).padStart(2, '0');
+                    const seconds = String(Math.floor(diff / 1000) % 60).padStart(2, '0');
+                    timerElem.textContent = `${hours}:${minutes}:${seconds}`;
+                    setTimeout(updateTimer, 1000);
+                }
+                updateTimer();
+            }
+            startCountdown('2025-05-16T18:00:00');
+        });
+=======
+                    const formData = new FormData(projectForm);
+                    const token = localStorage.getItem('token');
+
+                    try {
+                        const res = await fetch('/api/projects', {
+                            method: 'POST',
+                            body: formData,
+                            headers: { 'Authorization': `Bearer ${token}` }
+                        });
+
+                        const data = await res.json();
+
+                        if (res.ok && data.success) {
+                            const successDiv = document.getElementById('project-upload-success');
+                            successDiv.classList.remove('hidden');
+                            successDiv.textContent = 'Project uploaded successfully!';
+                            projectForm.reset();
+                            loadProjects();
+
+                            // Hide message after 3s
+                            setTimeout(() => successDiv.classList.add('hidden'), 3000);
+                        } else {
+                            alert('Error uploading project: ' + (data.error || res.status));
+                        }
+                    } catch (err) {
+                        alert('Server error: ' + err.message);
+                    }
+                });
+
+            }
+
+            // Fetch and display projects in dashboard
+            async function loadProjects() {
+                try {
+                    const token = localStorage.getItem('token'); // or wherever you store it
+                    const res = await fetch('/api/projects', {
+                        method: 'GET',
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+                    const projects = await res.json();
+                    const tbody = document.getElementById('project-list');
+                    tbody.innerHTML = '';
+                    projects.forEach(proj => {
+                        tbody.innerHTML += `
+                            <tr>
+                                <td class="px-4 py-2 border-b">${proj.name || ''}</td>
+                                <td class="px-4 py-2 border-b">
+                                    <a href="${proj.github}" target="_blank" class="text-blue-600 underline">GitHub</a>
+                                </td>
+                                <td class="px-4 py-2 border-b">
+                                    ${proj.video ? `<a href="${proj.video}" target="_blank" class="text-blue-600 underline">Video</a>` : ''}
+                                </td>
+                                <td class="px-4 py-2 border-b">
+                                    ${proj.ppt ? `<a href="${proj.ppt}" target="_blank" class="text-indigo-600 underline">Download PPT</a>` : '<span class="text-gray-400">No PPT</span>'}
+                                </td>
+                            </tr>
+                        `;
+                    });
+                } catch (err) {
+                    // Optionally handle error
+                }
+            }
+            // Load projects on dashboard show
+            loadProjects();
+        });
+
+        // Fetch team
+        async function fetchTeam() {
+            const res = await fetch('/api/team', {
+                headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+            });
+            return await res.json();
+        }
+
+        // Add member
+        async function addMember(name, email, role) {
+            const res = await fetch('/api/team/member', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${localStorage.getItem('token')}`
+                },
+                body: JSON.stringify({ name, email, role })
+            });
+            return await res.json();
+        }
+
+        // Remove member
+        async function removeMember(memberId) {
+            const res = await fetch(`/api/team/member/${memberId}`, {
+                method: 'DELETE',
+                headers: { 'Authorization': `Bearer ${localStorage.getItem('token')}` }
+            });
+            return await res.json();
+        }
+
+        // Modal open/close
+        const inviteModal = document.getElementById('invite-modal');
+        const openModalBtn = document.getElementById('open-invite-modal');
+        const closeModalBtn = document.getElementById('close-invite-modal');
+
+        openModalBtn.addEventListener('click', () => inviteModal.classList.remove('hidden'));
+        closeModalBtn.addEventListener('click', () => inviteModal.classList.add('hidden'));
+
+        // Invite logic
+        const sendInviteBtn = document.getElementById('send-invite');
+        const nameInput = document.getElementById('invite-name');
+        const emailInput = document.getElementById('invite-email');
+        const roleSelect = document.getElementById('invite-role');
+        const pendingList = document.getElementById('pending-invites');
+        const teamList = document.getElementById('team-list');
+        const teamMsg = document.getElementById('team-message');
+
+        let members = [];
+        let pendingInvites = [];
+        let idCounter = 1;
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        function renderPending(invite) {
+            const li = document.createElement('li');
+            li.className = 'flex items-center bg-yellow-100 p-2 rounded';
+            li.innerHTML = `
+        <div>
+            <span class="font-medium">${invite.name}</span> - ${invite.email} (<i>${invite.role}</i>)
+            <span class="ml-2 text-xs text-gray-500">Invitation sent</span>
+        </div>
+    `;
+            pendingList.appendChild(li);
+        }
+
+        function renderMember(member) {
+            const li = document.createElement('li');
+            li.className = 'flex justify-between items-center bg-gray-100 p-2 rounded';
+            li.innerHTML = `
+            <div>
+                <span class="font-medium">${member.name}</span> - <i>${member.role}</i>
+            </div>
+            <button class="text-red-500 hover:text-red-700 remove-btn">Remove</button>
+        `;
+            li.querySelector('.remove-btn').addEventListener('click', () => {
+                li.remove();
+                members = members.filter(m => m.id !== member.id);
+                teamMsg.textContent = 'Member removed successfully!';
+                setTimeout(() => teamMsg.textContent = '', 3000);
+            });
+            teamList.appendChild(li);
+        }
+
+        sendInviteBtn.addEventListener('click', () => {
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const role = roleSelect.value;
+
+            if (!name || !validateEmail(email)) {
+                alert('Please enter valid name and email!');
+                return;
+            }
+
+            // Send invite to backend
+            const token = localStorage.getItem('token');
+            fetch('/api/team/member', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({ name, email, role })
+            })
+                .then(async res => {
+                    if (res.ok) {
+                        teamMsg.textContent = 'Invitation sent!';
+                        setTimeout(() => teamMsg.textContent = '', 3000);
+                        // Optionally update UI
+                        renderPending({ name, email, role });
+                    } else {
+                        const err = await res.json();
+                        alert('Error sending invite: ' + (err.error || res.status));
+                    }
+                })
+                .catch(err => {
+                    alert('Server error: ' + err.message);
+                });
+
+            // Clear modal
+            nameInput.value = '';
+            emailInput.value = '';
+            roleSelect.value = 'Member';
+            inviteModal.classList.add('hidden');
+        });
+
+        const token = localStorage.getItem('token');
+
+        // Fetch and render team members
+        async function loadTeam() {
+            const res = await fetch('/api/team', {
+                headers: { 'Authorization': `Bearer ${token}` }
+            });
+            const team = await res.json();
+            renderTeam(team.members || []);
+        }
+
+        function renderTeam(members) {
+            const teamList = document.getElementById('team-list');
+            teamList.innerHTML = '';
+            members.forEach(member => {
+                const li = document.createElement('li');
+                li.className = 'flex justify-between items-center bg-gray-100 p-2 rounded';
+                li.innerHTML = `
+            <div>
+                <span class="font-medium">${member.name}</span> - <i>${member.role}</i>
+            </div>
+            <button class="text-red-500 hover:text-red-700 remove-btn" data-id="${member._id}">Remove</button>
+        `;
+                li.querySelector('.remove-btn').addEventListener('click', async () => {
+                    await fetch(`/api/team/member/${member._id}`, {
+                        method: 'DELETE',
+                        headers: { 'Authorization': `Bearer ${token}` }
+                    });
+                    loadTeam();
+                });
+                teamList.appendChild(li);
+            });
+        }
+
+        // Add member (from modal)
+        document.getElementById('send-invite').addEventListener('click', async () => {
+            const name = document.getElementById('invite-name').value.trim();
+            const email = document.getElementById('invite-email').value.trim();
+            const role = document.getElementById('invite-role').value;
+            if (!name || !email) return alert('Name and email required');
+            await fetch('/api/team/member', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`
+                },
+                body: JSON.stringify({ name, email, role })
+            });
+            document.getElementById('invite-modal').classList.add('hidden');
+            loadTeam();
+        });
+
+        // Initial load
+        loadTeam();
+>>>>>>> 3f728bc (implemented invite using email feature)
+    </script>
+</body>
+
+</html>
